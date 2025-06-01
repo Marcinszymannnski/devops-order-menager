@@ -1,0 +1,9 @@
+services:
+  orders:
+  bulid: ./orders
+  ports:
+    - "5000:5000"
+  payments:
+    build: ./payments
+    ports:
+      - "5001:5000"
