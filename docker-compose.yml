@@ -3,7 +3,33 @@ services:
     build: ./orders
     ports:
       - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:1234@orders-db:5432/orders_db
+    depends_on:
+      - orders-db
+
   payments:
     build: ./payments
     ports:
       - "5001:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:1234@payments-db:5432/payments_db
+    depends_on:
+      - payments-db
+
+  orders-db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: orders_db
+      
+
+  payments-db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: payments_db
