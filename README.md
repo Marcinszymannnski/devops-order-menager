@@ -31,7 +31,7 @@ Każdy serwis korzysta z SQLAlchemy i osobnej konfiguracji środowiska (`DATABAS
 
 ---
 
-## ▶Jak uruchomić
+## Jak uruchomić
 
 ### 1. Wymagania
 
