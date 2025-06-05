@@ -1,19 +1,19 @@
-# 🧾 DevOps Order Manager
+# DevOps Order Manager
 
 **DevOps Order Manager** to projekt mikroserwisowy oparty o konteneryzację, mający na celu symulację rzeczywistej aplikacji do zarządzania zamówieniami i płatnościami. Projekt został stworzony w celach edukacyjnych (DevOps / Backend) i umożliwia testowanie integracji wielu usług, baz danych oraz orkiestracji z Docker Compose.
 
 ---
 
-## ✅ Aktualny stan projektu 01.06.2025
+## Aktualny stan projektu 01.06.2025
 
 W obecnej wersji zrealizowano:
 
-### 🔧 Mikroserwisy
+### Mikroserwisy
 
 - `orders` – zarządza zamówieniami klientów (POST, GET)
 - `payments` – obsługuje płatności powiązane z zamówieniami (POST, GET)
 
-### 🗃️ Bazy danych
+###  Bazy danych
 
 Każdy mikroserwis posiada własną bazę PostgreSQL:
 
@@ -22,7 +22,7 @@ Każdy mikroserwis posiada własną bazę PostgreSQL:
 
 Każdy serwis korzysta z SQLAlchemy i osobnej konfiguracji środowiska (`DATABASE_URL`).
 
-### 🐳 Docker / Docker Compose
+### Docker
 
 - Każdy serwis ma osobny `Dockerfile`
 - Całość zarządzana z `docker-compose.yml`
@@ -31,7 +31,7 @@ Każdy serwis korzysta z SQLAlchemy i osobnej konfiguracji środowiska (`DATABAS
 
 ---
 
-## ▶️ Jak uruchomić
+## ▶Jak uruchomić
 
 ### 1. Wymagania
 
